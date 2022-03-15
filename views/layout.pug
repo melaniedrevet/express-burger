@@ -1,0 +1,31 @@
+block variables
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Project Node
+        block styles
+            link(rel="stylesheet" href="/styles/pico.min.css")
+            link(rel="stylesheet" href="/styles/app.css")
+        body
+            main.container
+                block body
+                    nav
+                        ul
+                            li
+                                a(href="/") Home
+                            li
+                                a(href="/menu") Menu
+                            li
+                                a(href="/burger") Burger
+                            li
+                                a(href="/boisson") Boisson
+                            li
+                                a(href="/accompagnement") Accompagnement
+                    block content
+                block scripts
+                    script(src="/scripts/app.js")
+                footer.footer
+                p 2022 - Project Node
