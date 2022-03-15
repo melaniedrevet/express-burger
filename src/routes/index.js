@@ -1,9 +1,9 @@
 const express = require("express");
 
-const menuRouter = require("./menu.router");
-const burgerRouter = require("./burger.router");
-const boissonRouter = require("./boisson.router");
-const accompagnementRouter = require("./accompagnement.router");
+const menusRouter = require("./menus.router");
+const burgersRouter = require("./burgers.router");
+const boissonsRouter = require("./boissons.router");
+const accompagnementsRouter = require("./accompagnements.router");
 
 const router = express.Router();
 
@@ -11,9 +11,9 @@ router.get("/", (_req, res) => {
   res.render("home");
 });
 
-router.use("/menu", menuRouter);
-router.use("/burger", burgerRouter);
-router.use("/boisson", boissonRouter);
-router.use("/accompagnement", accompagnementRouter);
+router.use("/menus", menusRouter);
+router.use("/burgers", burgersRouter);
+router.use("/boissons", boissonsRouter);
+router.use("/accompagnements", accompagnementsRouter);
 
 module.exports = router;
