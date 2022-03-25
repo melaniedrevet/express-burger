@@ -1,17 +1,18 @@
 const db = require("../db");
 
 async function findAll() {
-    return db.get("SELECT * FROM menus");
+  const query = "SELECT * FROM menus";
+  return db.all(query);
 }
 
-// async function find(id) {
-//   return db.get("SELECT * FROM posts WHERE (id = ?)", [id]);
-// }
+async function find(id) {
+  return db.get("SELECT * FROM menus WHERE (id = ?)", [id]);
+}
 
-// async function create({ title, body, imageURL }) {
+// async function create({ nom, prix, burgerId, boissonId, accompagnementId }) {
 //   return db.run(
-//     'INSERT INTO posts (title, imageURL, body, ispublished, createdAt) VALUES (?, ?, ?, TRUE, datetime("now"))',
-//     [title, imageURL, body]
+//     'INSERT INTO menus (nom, prix, burgerId, boissonId, accompagnementId) VALUES (?, ?, ?, ?, ?',
+//     [nom, prix, burgerId, boissonId, accompagnementId]
 //   );
 // }
 
@@ -28,7 +29,7 @@ async function findAll() {
 
 module.exports = {
   findAll,
-//   find,
+  find,
 //   create,
 //   update,
 //   remove,

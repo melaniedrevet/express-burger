@@ -1,13 +1,18 @@
-.post-content {
-    white-space: pre-wrap;
+nav {
+    margin-top:-20px;
+    margin-bottom: 40px;
 }
 
-.inline {
-    display: inline-block;
-    width: initial;
+nav ul li {
+    padding: 20px;
 }
 
-.footer {
-    margin-top: 24px;
-    text-align: center;
+.left {
+    position: relative;
+    left: 0;
+}
+
+.right {
+    position: relative;
+    right: 0;
 }

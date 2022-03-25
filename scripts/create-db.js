@@ -47,23 +47,35 @@ db.serialize(() => {
   // if (args.includes("--seed")) {
   //   console.log("Seeding data into database...");
 
+    // INSERT BURGERS
     db.run(
       'INSERT INTO burgers (id, nom, prix, description) VALUES (1, "Big Mac", 5, "Description")'
     );
+    db.run(
+      'INSERT INTO burgers (id, nom, prix, description) VALUES (2, "CBO", 4, "Description2")'
+    );
     
+    // INSERT BOISSONS
     db.run(
       'INSERT INTO boissons (id, nom, prix, taille) VALUES (1, "Coca-Cola", 2, "Grande")'
     );
-
     db.run(
-      'INSERT INTO accompagnements (id, nom, prix, taille, sauce) VALUES (1, "Grande frite", 2, "Grande", "Ketchup")'
+      'INSERT INTO boissons (id, nom, prix, taille) VALUES (2, "Ice-tea", 2, "Moyenne")'
+    );
+
+    // INSERT ACCOMPAGNEMENTS
+    db.run(
+      'INSERT INTO accompagnements (id, nom, prix, taille, sauce) VALUES (1, "Frites", 2, "Grande", "Ketchup")'
+    );
+    db.run(
+      'INSERT INTO accompagnements (id, nom, prix, taille, sauce) VALUES (2, "Potatoes", 1.5, "Grande", "Barbecue")'
     );
 
     db.run(
       'INSERT INTO menus (id, nom, prix, burgerId, boissonId, accompagnementId) VALUES (1, "Menu Best Of", 9, 1, 1, 1)'
     );
     db.run(
-      'INSERT INTO menus (id, nom, prix, burgerId, boissonId, accompagnementId) VALUES (2, "Menu Maxi Best Of", 11, 1, 1, 1)'
+      'INSERT INTO menus (id, nom, prix, burgerId, boissonId, accompagnementId) VALUES (2, "Menu Maxi Best Of", 11, 2, 2, 2)'
     );
 
   // }

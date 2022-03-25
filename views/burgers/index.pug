@@ -1,8 +1,15 @@
 extends ../layout.pug 
 
 block variables
-  - const title = "Burger"
+  - const title = "Burgers"
 
 block content
   div
-    h1 Hello from Burger page !
+    h1 Découvrez nos burgers
+    each burger in burgers
+      div 
+        h4= burger.nom
+        h5= burger.description
+        p Prix : #{burger.prix} €
+        a(href=`/burgers/${burger.id}`) En savoir plus →
+        hr

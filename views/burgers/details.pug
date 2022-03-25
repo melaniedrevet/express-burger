@@ -1,0 +1,12 @@
+extends ../layout.pug 
+
+block variables
+  - const title = "Burger"
+
+block content
+  div
+    a(href=`/burgers`) ← Retourner aux burgers
+    hr
+
+    h4= burger.nom
+    p Prix :  #{burger.prix} €

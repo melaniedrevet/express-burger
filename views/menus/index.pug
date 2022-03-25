@@ -5,6 +5,11 @@ block variables
 
 block content
   div
-    h1 Hello from Menu page !
+    h1 Découvrez nos menus
     each menu in menus
-      div= menu
+      div 
+        h4= menu.nom
+        p Prix : #{menu.prix} €
+        a(href=`/menus/${menu.id}`) En savoir plus →
+        hr
+      

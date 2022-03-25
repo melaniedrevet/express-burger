@@ -1,8 +1,15 @@
 extends ../layout.pug 
 
 block variables
-  - const title = "Accompagnement"
+  - const title = "Accompagnements"
 
 block content
   div
-    h1 Hello from Accompagnement page !
+    h1 Découvrez nos accompagnements
+    each accompagnement in accompagnements
+      div 
+        h4= accompagnement.nom
+        p Taille : #{accompagnement.taille}
+        p Prix : #{accompagnement.prix} €
+        a(href=`/accompagnements/${accompagnement.id}`) En savoir plus →
+        hr

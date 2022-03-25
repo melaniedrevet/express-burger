@@ -1,0 +1,29 @@
+extends ../layout.pug 
+
+block variables
+  - const title = "Menu"
+
+block content
+  div
+    a(href=`/menus`) ← Retourner aux menus
+    hr
+
+    h4= menu.nom
+    p Prix :  #{menu.prix} €
+    table  
+      tr 
+        th Burgers
+        th Boissons
+        th Accompagnements
+      tr 
+      each burger in burgers
+        td 
+          a(href=`/burgers/${burger.id}`) #{burger.nom} - #{burger.prix} €
+      each boisson in boissons
+        td 
+          a(href=`/boissons/${boisson.id}`) #{boisson.nom} #{boisson.prix} €
+      each accompagnement in accompagnements
+        td 
+          a(href=`/accompagnements/${accompagnement.id}`)  #{accompagnement.nom} #{accompagnement.prix} €
+
+      

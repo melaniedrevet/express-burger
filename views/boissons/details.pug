@@ -1,0 +1,12 @@
+extends ../layout.pug 
+
+block variables
+  - const title = "Boisson"
+
+block content
+  div
+    a(href=`/boissons`) ← Retourner aux boissons
+    hr
+
+    h4= boisson.nom
+    p Prix :  #{boisson.prix} €

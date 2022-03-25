@@ -1,8 +1,15 @@
 extends ../layout.pug 
 
 block variables
-  - const title = "Boisson"
+  - const title = "Boissons"
 
 block content
   div
-    h1 Hello from Boisson page !
+    h1 Découvrez nos boisssons
+    each boisson in boissons
+      div 
+        h4= boisson.nom
+        p Taille : #{boisson.taille}
+        p Prix : #{boisson.prix} €
+        a(href=`/boissons/${boisson.id}`) En savoir plus →
+        hr

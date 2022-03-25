@@ -1,0 +1,12 @@
+extends ../layout.pug 
+
+block variables
+  - const title = "Accompagnement"
+
+block content
+  div
+    a(href=`/accompagnements`) ← Retourner aux accompagnements
+    hr
+
+    h4= accompagnement.nom
+    p Prix :  #{accompagnement.prix} €

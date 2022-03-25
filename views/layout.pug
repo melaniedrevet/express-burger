@@ -13,11 +13,12 @@ html(lang="en")
             main.container
                 block body
                     nav
-                        ul
+                        ul.left
                             li
                                 a(href="/") Home
                             li
-                                a(href="/menus") Menus
+                                a(href="/menus") Menus 
+                        ul.right
                             li
                                 a(href="/burgers") Burgers
                             li
@@ -27,5 +28,3 @@ html(lang="en")
                     block content
                 block scripts
                     script(src="/scripts/app.js")
-                footer.footer
-                p 2022 - Project Node
